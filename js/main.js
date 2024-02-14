@@ -11,22 +11,21 @@ window.addEventListener('load', function () {
     canvas.width = 1440;
     canvas.height = 900; //900
 
-   
+
     const ctrl = new Controller();
     const game = new Game({
         width: canvas.width,
         height: canvas.height
     });
- 
-
-
-    function animate(){
-        game.update(ctrl);
-        requestAnimationFrame(animate);
-    }
 
     animate();
 
+
+    // Starts the game
+    function animate() {
+        game.update(ctrl);
+        requestAnimationFrame(animate);
+    }
 
 
 })

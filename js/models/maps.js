@@ -2,8 +2,12 @@
 // collections of the maps for the game. 
 import { Slime } from '/js/models/slime.js'
 import { Tile } from '/js/models/tile.js'
+import { Bounds } from '/js/models/bounds.js'
 
-var Composite = Matter.Composite;
+
+
+var Composite = Matter.Composite,
+    Bodies = Matter.Bodies
 export class Shop {
     constructor(game) {
 
@@ -16,8 +20,8 @@ export class Shop {
         this.height = game.height;
         this.width = game.width;
         this.world = game.engine.world;
+        this.bounds = new Bounds(this.width,this.height);
 
-        
 
         //slime
         this.slime = new Slime({
@@ -45,6 +49,12 @@ export class Shop {
         this.tiles.push(this.floor);
         this.bodies.push(this.floor.body);
 
+      
+        this.bodies.push(this.bounds.wallTop);
+        this.bodies.push(this.bounds.wallBot);
+        this.bodies.push(this.bounds.wallLeft);
+        this.bodies.push(this.bounds.wallRight);
+
 
 
         // Add the bodies to engine
@@ -53,17 +63,15 @@ export class Shop {
 
 
     update() {
-        for (var e in this.enemies){
+        for (var e in this.enemies) {
             this.enemies[e].update()
         }
 
-        this.floor.update()
+        this.floor.draw();
+
         //this.draw();
     }
 
     draw() {
-
     }
-
-
 }

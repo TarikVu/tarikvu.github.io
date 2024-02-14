@@ -100,3 +100,8 @@ refactor
   - to fix this whenever an image is being drawn for an object that has a respective body, the ctx.draw will need some padding. 
 
 - Now that that code base for main has been switched to javascript [modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules), the code base is now subject to the [CORS Policy](https://stackoverflow.com/questions/52919331/access-to-script-at-from-origin-null-has-been-blocked-by-cors-policy).  Pros include being able to utilze keyterms such as "Export" and "Import" to better track the scripts.  However this limits being able to use the html file without needing to be be hosted on a server. 
+
+
+- [Github pages 404 issue fix](https://stackoverflow.com/questions/11577147/how-to-fix-http-404-on-github-pages) (add .nojekyll)
+
+- [Static bodies need friction to applied after creation](https://github.com/liabru/matter-js/issues/694)

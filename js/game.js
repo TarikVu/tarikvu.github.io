@@ -33,6 +33,8 @@ export class Game {
           );
         Composite.add(this.world,mouseConstraint)
 
+
+        // Run the physics engine for the game
         Runner.run(this.engine);
     }
 
@@ -47,7 +49,7 @@ export class Game {
        this.draw();
         
         // Updates the current gameworld's map.
-        this.map.update()
+        this.map.update();
 
    
     }
