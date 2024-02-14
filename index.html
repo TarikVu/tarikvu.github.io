@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- shift alt f to format-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepwood</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+    <canvas id="gamescreen"></canvas>
+    <h1 class="text">Deepwood</h1>
+
+
+    <!-- Scripts here-->
+    <script type="module" src="js/main.js"></script>
+    <script src="node_modules/matter-js/build/matter.js"></script>
+
+    <!--Include sprites in the html as a way to preload them.-->
+    <img class="player" src="img/player/_Idle.png">
+    <img class="player" src="img/player/_Run.png">
+    <img class="player" src="img/player/_Jump.png">
+    <img class="enemy" src="img/slime-Sheet.png">
+
+    <img id = "coin" src="img/coin.png">
+    <img id = "grass" src = "img/grass.png">
+    
+
+    <!--Stage Background images-->
+    <img class="background" src = "img/field.png">
+
+</body>
+
+</html>

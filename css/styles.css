@@ -1,0 +1,46 @@
+body {
+    background-color: black;
+}
+
+canvas {
+
+    margin: 0 auto;
+    display: block;
+
+}
+
+
+#gamescreen {
+    background-color: white;
+    max-width: 100%;
+    max-height: 100%;
+
+    /* position: absolute;*/
+    /* transform:translate(-50%,-50%);*/
+}
+
+/* Main character animations */
+.player {
+    display: none;
+}
+
+.enemy{
+    display: none;
+    
+}
+.background {
+    display: none;
+}
+
+.text {
+    color: forestgreen;
+}
+
+/* ID's */
+#coin {
+    display: none;
+}
+
+#grass{
+    display: none;
+}
