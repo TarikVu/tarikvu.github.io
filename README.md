@@ -1,5 +1,5 @@
-# Deepwood (Pre-Alpha)
-Deepwood is a basic game composed of HTML5, CANVAS, and JavaScript.
+# Slime Basher (Pre-Alpha)
+Slime Bashr is a basic game composed of HTML5, CANVAS, and JavaScript.
 for an in-depth look at my implementation please check out the [Wiki page here](https://github.com/TarikVu/Deepwood/wiki).
 
 ## Table of Contents
