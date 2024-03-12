@@ -7,7 +7,7 @@ export class Bounds {
         this.width = width;
         this.height = height;
 
-        var wallThick = 150;
+        var wallThick = 300;
         this.wallTop = Bodies.rectangle(
             // x,y
             (this.width / 2) - 100,

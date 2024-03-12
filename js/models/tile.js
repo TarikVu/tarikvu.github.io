@@ -5,13 +5,15 @@ export class Tile {
     constructor({
         image,
         position,
-        debug = false
+        debug = false,
+        scale = 2
     }
     ) {
         this.image = image;
         this.width = image.width;
         this.height = image.height;
-        this.scale = 2;
+        this.scale = scale;
+        
         this.position = position;
         this.position.x += this.image.width; 
         //this.position.y -= this.image.height; 

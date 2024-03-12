@@ -9,7 +9,7 @@ export class Sprite {
             spriteDims = { width: 1, height: 1 },
             ColRow = { cols: 1, rows: 1 },
             offset = { x: 0, y: 0 },
-            showDrawBox = false
+            debug = false
         }
     ) {
 
@@ -29,7 +29,7 @@ export class Sprite {
         // Offset the dx,dy to match body and sprite animation.
         this.offset = offset
 
-        this.showDrawBox = showDrawBox
+        this.debug = debug
 
         // Logic to split up the rows and collumns evenly depending on 
         // either being provided the sprite dimensions or the rows and collumns
@@ -155,7 +155,7 @@ export class Sprite {
 
         //console.log(this.hitBox)
 
-        if (this.showDrawBox) {
+        if (this.debug) {
             // dx dy position drawn
             ctx.globalAlpha = 0.5;
             ctx.fillStyle = 'black'
@@ -165,6 +165,8 @@ export class Sprite {
                 this.spriteDims.width * this.scale,
                 this.spriteDims.height * this.scale,
             )
+            ctx.globalAlpha = 1;
+
         }
     }
 

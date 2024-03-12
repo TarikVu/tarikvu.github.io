@@ -51,7 +51,8 @@ export class Slime {
             {
                 inertia: Infinity,
                 restitution: 0.35,
-                friction: 0.005
+                friction: 0.005,
+                chamfer:5
             }
         );
 
@@ -62,7 +63,7 @@ export class Slime {
     update(ctrl) {
 
         this.position = this.body.vertices[0];
-        this.sprite.position = this.position
+        this.sprite.position = this.position;
         this.sprite.update();
 
         if (this.debug) {

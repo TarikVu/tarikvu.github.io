@@ -1,4 +1,8 @@
+
+import { Controller } from './controller.js'
 import { Player } from './models/player.js'
+
+
 import { Shop } from './models/maps.js'
 import { PauseMenu } from './models/pausemenu.js'
 
@@ -13,6 +17,8 @@ var Engine = Matter.Engine,
 export class Game {
     constructor(
         {
+            engine,
+            fps,
             width,
             height
         }
@@ -20,55 +26,56 @@ export class Game {
 
         this.width = width;
         this.height = height;
-        
-        
+
         // Set up physics and Game world
-        this.engine = Engine.create();
+        this.engine = engine;
         this.world = this.engine.world;
-        this.map = new Shop(this);
+
+        this.player = new Player({
+            gravity:this.engine.gravity,
+            position: { x: 200, y: 100 },
+        });
+
+        this.ctrl = new Controller();
+        this.map = new Shop(this, this.player);
 
         // Add to move the sprites w/ the mouse (for now)
         const mouseConstraint = Matter.MouseConstraint.create(
-            this.engine, {element: canvas}
-          );
-        Composite.add(this.world,mouseConstraint)
+            this.engine, { element: canvas }
+        );
+        Composite.add(this.world, mouseConstraint)
+
+        this.fps = fps;
+
+        // Set the FPS and delta ( timestep ) according to the fps option.
+        this.runner = Runner.create({
+            fps: this.fps,
+            isFixed: false,
+            delta: 1000 / this.fps,
+        });
+
+        // Adjust gravity to match timestep speed,
+        // This helps normalize the physics engines on different refresh rates.
+        // IMPORTANT**** THIS WAY OF scaling for delta may need to be applied for velocity of movement
+        // and other logic as well.
+        if (this.fps == 60) {
+            this.engine.gravity.scale = 0.01
+        } else {
+            this.engine.gravity.scale = 0.0075
+        }
 
 
-        // Run the physics engine for the game
-        Runner.run(this.engine);
+        Runner.run(this.runner, this.engine)
     }
-
-
 
 
 
     // Looped from main
-    update(ctrl) {
-
-        // Draws Bg for now.
-       this.draw();
-        
+    update() {
         // Updates the current gameworld's map.
-        this.map.update();
-
-   
-    }
-
-    draw() {
-        this.drawImageScaled(this.map.background, canvas)
+        this.map.update(this.ctrl);
     }
 
 
-    // Scales Bg to game screen REF: README
-    drawImageScaled(img, canvas) {
-        var hRatio = canvas.width / img.width;
-        var vRatio = canvas.height / img.height;
-        var ratio = Math.min(hRatio, vRatio);
-        var centerShift_x = (canvas.width - img.width * ratio) / 2;
-        var centerShift_y = (canvas.height - img.height * ratio) / 2;
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(img, 0, 0, img.width, img.height,
-            centerShift_x, centerShift_y, img.width * ratio, img.height * ratio);
-    }
 
 }

@@ -1,5 +1,5 @@
 # Slime Basher (Pre-Alpha)
-Slime Bashr is a basic game composed of HTML5, CANVAS, and JavaScript.
+Slime Basher is a basic game composed of HTML5, CANVAS, and JavaScript.
 for an in-depth look at my implementation please check out the [Wiki page here](https://github.com/TarikVu/Deepwood/wiki).
 
 ## Table of Contents
@@ -105,3 +105,8 @@ refactor
 - [Github pages 404 issue fix](https://stackoverflow.com/questions/11577147/how-to-fix-http-404-on-github-pages) (add .nojekyll)
 
 - [Static bodies need friction to applied after creation](https://github.com/liabru/matter-js/issues/694)
+
+
+- [Detecting monitor hz](https://stackoverflow.com/questions/6131051/is-it-possible-to-find-out-what-is-the-monitor-frame-rate-in-javascript)
+
+/// Bugs Sometimes the game loads before the fps is correctly calcuated. resulting in incorrect game settings.
