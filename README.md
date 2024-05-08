@@ -6,7 +6,11 @@ More on Github pages [here](https://docs.github.com/en/pages/getting-started-wit
 ## <a name = "stack"></a> Tech Stack:
 
 Frontend: React 
+
 Backend: Javascript
+
+Database: TBD
+
 DevOps: GitHub
 
 
