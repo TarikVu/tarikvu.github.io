@@ -51,7 +51,6 @@ window.addEventListener('load', function () {
     // Detect monitor Hz then create game using either
     // 60 fps or 144 fps.
     getFPS().then(result => {
-
         if (result < 120) {
             FPS = 60
         }
