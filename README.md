@@ -1,18 +1,17 @@
 # Slime Basher (Pre-Alpha) 🎮
 [Game Preview ➡](https://tarikvu.github.io/)
 
-![example](https://github.com/TarikVu/imgs/blob/main/SlimeBasher/SlimeBasher_example.PNG?raw=true)
-
 [Game Wiki page➡](https://github.com/TarikVu/Deepwood/wiki)
+
+![example](https://github.com/TarikVu/imgs/blob/main/SlimeBasher/SlimeBasher_example.PNG?raw=true)
 
 ## Table of Contents
 1. [Features](#feats)
 1. [Libraries](#lib)
-1. [Design](#design)
+1. [Architecture](#arch)
 1. [Planned Features](#pfeats)
 1. [Development Notes](#devnotes)
 1. [Appendix](#apdx)
-
 
 ## <a name="feats"></a> Features
 - Custom Spritesheet class
@@ -24,8 +23,9 @@
 An open-sourced JavaScript library with a robust physics engine commonly used for (browser) game development.
 ![matterjs](https://github.com/TarikVu/imgs/blob/main/SlimeBasher/matterlogo.png?raw=true)
 
+[Official Page ➡](https://brm.io/matter-js/)
 
-## <a name="design"></a> Design
+## <a name="arch"></a> Architecture 
 ![diagram](https://github.com/TarikVu/imgs/blob/main/SlimeBasher/slimebasher_diagram.PNG?raw=true)
 
 
