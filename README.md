@@ -1,4 +1,5 @@
 # Slime Basher (Pre-Alpha) 🎮
+[Game Preview ➡](https://tarikvu.github.io/)
 
 ![example](https://github.com/TarikVu/imgs/blob/main/SlimeBasher/SlimeBasher_example.PNG?raw=true)
 
@@ -6,6 +7,7 @@
 
 ## Table of Contents
 1. [Features](#feats)
+1. [Libraries](#lib)
 1. [Design](#design)
 1. [Planned Features](#pfeats)
 1. [Development Notes](#devnotes)
@@ -16,6 +18,11 @@
 - Custom Spritesheet class
   - Splits a sprite sheet equalatterally into rows and collums for easy access to frame animations.
   - Provides ease of use to animate, scale, and update the sprites.
+  - 
+## <a name="lib"></a> Libararies 
+### Matter.js
+An open-sourced JavaScript library with a robust physics engine commonly used for (browser) game development.
+![matterjs](https://github.com/TarikVu/imgs/blob/main/SlimeBasher/matterlogo.png?raw=true)
 
 
 ## <a name="design"></a> Design
